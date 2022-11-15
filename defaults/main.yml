@@ -1,8 +1,4 @@
 ---
-lighthouse_path: "/usr/share/nginx/lighthouse"
-lighthouse_port: "8008"
-clickhouse_host: "127.0.0.1"
-clickhouse_port: "8123"
-clickhouse_user: "admin"
-clickhouse_password: ""
-...
+# defaults file for lighthouse
+lighthouse_dir: "/opt/lighthouse"
+lighthouse_access_log: lighthouse_access
