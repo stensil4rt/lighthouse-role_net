@@ -13,7 +13,7 @@
     name: nginx
     state: present
   notify: Start nginx
-- name: NGINX | Create general config
+- name: NGINX -> Create general config
   become: true
   ansible.builtin.template:
     src: templates/nginx.conf.j2
@@ -25,7 +25,7 @@
 - name: Lighthouse -> github
   become: true
   ansible.builtin.git:
-    repo: "{{ lighthouse_srepo }}"
+    repo: "{{ lighthouse_repo }}"
     version: master
     dest: "{{ lighthouse_dir }}"
   notify: Get lighthouse GIT
