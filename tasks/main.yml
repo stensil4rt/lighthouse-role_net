@@ -9,7 +9,7 @@
 # install nginx
 - name: NGINX -> install Nginx
   become: true
-  ansible.builtin.yapt:
+  ansible.builtin.apt:
     name: nginx
     state: present
   notify: Start nginx
