@@ -22,14 +22,14 @@
   notify: Reload nginx
   
 # install lighthouse
-- name: 'Lighthouse -> github'
+- name: Lighthouse -> github
   become: true
   ansible.builtin.git:
     repo: "{{ lighthouse_src }}"
     version: master
     dest: "{{ lighthouse_dir }}"
   notify: Get lighthouse GIT
-- name: 'lighthouse -> nginx config'
+- name: lighthouse -> nginx config
   become: true
   ansible.builtin.template:
     src: lighthouse.conf.j2
