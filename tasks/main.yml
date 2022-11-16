@@ -3,18 +3,13 @@
 # Подготовка, pre tasks
 - name: Lighthouse -> install git
   become: true
-  ansible.builtin.yum:
+  ansible.builtin.apt:
     name: git
     state: present
 # install nginx
-- name: Install epel-release
-  become: true
-  ansible.builtin.yum:
-    name: epel-release
-    state: present
 - name: NGINX -> install Nginx
   become: true
-  ansible.builtin.yum:
+  ansible.builtin.yapt:
     name: nginx
     state: present
   notify: Start nginx
